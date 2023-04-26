@@ -1,0 +1,171 @@
+
+<div
+  *ngIf="vehicle"
+  class="w-full max-w-md p-2 bg-white border border-gray-200 rounded-lg shadow sm:p-8 dark:bg-gray-800 dark:border-gray-700"
+>
+  <div class="flex items-center justify-between mb-4">
+    <h5 class="text-xl font-bold leading-none text-gray-900 dark:text-white">
+      Datos generales del vehiculo
+    </h5>
+  </div>
+  <div class="flow-root">
+    <ul role="list" class="divide-y divide-gray-200 dark:divide-gray-700">
+      <li class="pt-3 pb-0 sm:pt-4">
+        <div class="flex items-center space-x-4">
+          <div class="flex-shrink-0">
+            <span>Id:</span>
+          </div>
+          <div
+            class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white"
+          >
+            {{ vehicle.id }}
+          </div>
+        </div>
+      </li>
+      <li class="pt-3 pb-0 sm:pt-4">
+        <div class="flex items-center space-x-4">
+          <div class="flex-shrink-0  dark:text-white">
+            <span>Creado por:</span>
+          </div>
+          <div
+            class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white"
+          >
+            {{ vehicle.createdBy }}
+          </div>
+        </div>
+      </li>
+      <li class="pt-3 pb-0 sm:pt-4">
+        <div class="flex items-center space-x-4">
+          <div class="flex-shrink-0">
+            <span>Placa:</span>
+          </div>
+          <div
+            class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white"
+          >
+            {{ vehicle.plate }}
+          </div>
+        </div>
+      </li>
+      <li class="pt-3 pb-0 sm:pt-4">
+        <div class="flex items-center space-x-4">
+          <div class="flex-shrink-0">
+            <span>Modelo:</span>
+          </div>
+          <div
+            class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white"
+          >
+            {{ vehicle.model }}
+          </div>
+        </div>
+      </li>
+      <li class="pt-3 pb-0 sm:pt-4">
+        <div class="flex items-center space-x-4">
+          <div class="flex-shrink-0">
+            <span>Licencia de transito:</span>
+          </div>
+          <div
+            class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white"
+          >
+            {{ vehicle.transitLicense }}
+          </div>
+        </div>
+      </li>
+      <li class="pt-3 pb-0 sm:pt-4">
+        <div class="flex items-center space-x-4">
+          <div class="flex-shrink-0">
+            <span>Nùmero de motor:</span>
+          </div>
+          <div
+            class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white"
+          >
+            {{ vehicle.plate }}
+          </div>
+        </div>
+      </li>
+      <li class="pt-3 pb-0 sm:pt-4">
+        <div class="flex items-center space-x-4">
+          <div class="flex-shrink-0">
+            <span>Peso vacío:</span>
+          </div>
+          <div
+            class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white"
+          >
+            {{ vehicle.emptyWeight }}
+          </div>
+        </div>
+      </li>
+      <li class="pt-3 pb-0 sm:pt-4">
+        <div class="flex items-center space-x-4">
+          <div class="flex-shrink-0">
+            <span>Número de VIM:</span>
+          </div>
+          <div
+            class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white"
+          >
+            {{ vehicle.vin }}
+          </div>
+        </div>
+      </li>
+      <li class="pt-3 pb-0 sm:pt-4">
+        <div class="flex items-center space-x-4">
+          <div class="flex-shrink-0">
+            <span>Capacidad de cilindraje:</span>
+          </div>
+          <div
+            class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white"
+          >
+            {{ vehicle.cylinderCapacity }}
+          </div>
+        </div>
+      </li>
+      <li class="pt-3 pb-0 sm:pt-4">
+        <div class="flex items-center space-x-4">
+          <div class="flex-shrink-0">
+            <span>Tipo de combustible:</span>
+          </div>
+          <div
+            class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white"
+          >
+            {{ vehicle.fuelType }}
+          </div>
+        </div>
+      </li>
+      <li class="pt-3 pb-0 sm:pt-4">
+        <div class="flex items-center space-x-4">
+          <div class="flex-shrink-0">
+            <span>Tipo de propiedad:</span>
+          </div>
+          <div
+            class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white"
+          >
+            {{ vehicle.propertyType }}
+          </div>
+        </div>
+      </li>
+      <li class="pt-3 pb-0 sm:pt-4">
+        <div class="flex items-center space-x-4">
+          <div class="flex-shrink-0">
+            <span>Capacidad de carga:</span>
+          </div>
+          <div
+            class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white"
+          >
+            {{ vehicle.loadingCapacity }}
+          </div>
+        </div>
+      </li>
+      <li class="pt-3 pb-0 sm:pt-4">
+        <div class="flex items-center space-x-4">
+          <div class="flex-shrink-0">
+            <span>Estatus:</span>
+          </div>
+          <div
+            class="inline-flex items-center text-base font-semibold text-gray-900 dark:text-white"
+          >
+            {{ vehicle.status }}
+          </div>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>

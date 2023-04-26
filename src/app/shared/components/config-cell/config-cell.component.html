@@ -1,0 +1,42 @@
+<span class="flex justify-around">
+  <button
+    aria-expanded="false"
+    (click)="isOpen = !isOpen"
+    cdkOverlayOrigin
+    #modalInfoOverlay="cdkOverlayOrigin"
+  >
+    <fa-icon class="fa-xl text-teal-600" [icon]="icons.faCircleInfo"></fa-icon>
+  </button>
+  <button
+    (click)="isOpen = !isOpen"
+    cdkOverlayOrigin
+    #modalEditOverlay="cdkOverlayOrigin"
+  >
+    <fa-icon class="fa-lg" [icon]="icons.faPen"></fa-icon>
+  </button>
+  <button (click)="removeClicked()">
+    <fa-icon class="fa-lg text-red-700" [icon]="icons.faTrash"></fa-icon>
+  </button>
+</span>
+
+<ng-template
+  cdkConnectedOverlay
+  [cdkConnectedOverlayOrigin]="modalInfoOverlay"
+  [cdkConnectedOverlayOpen]="isOpen"
+>
+  <app-modal
+    [vehicle]="params.data"
+    (isShowModal)="isOpen = $event"
+  ></app-modal>
+</ng-template>
+
+<ng-template
+  cdkConnectedOverlay
+  [cdkConnectedOverlayOrigin]="modalEditOverlay"
+  [cdkConnectedOverlayOpen]="isOpen"
+>
+  <app-modal
+    [vehicle]="params.data"
+    (isShowModal)="isOpen = $event"
+  ></app-modal>
+</ng-template>

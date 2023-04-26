@@ -1,0 +1,23 @@
+/* You can add global styles to this file, and also import other style files */
+html,
+body {
+  height: 100%;
+}
+
+#map {
+  height: 400px;
+  width: 350px;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.leaflet-default-icon {
+  background-image: url(https://unpkg.com/leaflet@1.7.1/dist/images/marker-icon.png);
+}
+
+@import "~ag-grid-community/styles//ag-grid.css";
+@import "~ag-grid-community/styles//ag-theme-alpine.css";
+
+@import "@angular/cdk/overlay-prebuilt.css";

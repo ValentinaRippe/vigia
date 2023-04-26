@@ -1,0 +1,50 @@
+<div class="flex min-w-full m-0 p-0">
+  <ul
+    class="h-full w-48 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white"
+  >
+    <button (click)="openTab(2)" class="min-w-full">
+      <li
+        [ngClass]="activeMap"
+        class="flex justify-between w-full px-4 py-4 border-b border-gray-200 dark:border-gray-600"
+      >
+        Ubicación
+        <fa-icon class="fa-lg" [icon]="icons.faMapLocation"></fa-icon>
+      </li>
+    </button>
+    <button (click)="openTab(1)" class="min-w-full">
+      <li
+        [ngClass]="activeEdit"
+        class="flex justify-between w-full px-4 py-4 border-b border-gray-200 rounded-t-lg dark:border-gray-600"
+      >
+        Editar
+        <fa-icon class="fa-lg" [icon]="icons.faPen"></fa-icon>
+      </li>
+    </button>
+    <button (click)="removeClicked()" class="min-w-full">
+      <li
+        class="flex justify-between w-full px-4 py-4 border-b border-gray-200 dark:border-gray-600"
+      >
+        Eliminar
+        <fa-icon class="fa-lg text-red-700" [icon]="icons.faTrash"></fa-icon>
+      </li>
+    </button>
+  </ul>
+  <div class="w-full">
+    <ng-content></ng-content>
+    <section
+    [ngClass]="isOpenMap ? 'd-block' : 'hidden'"
+    class="w-full flex flex-col justify-center items-center bg-light text-secondary"
+  >
+    <h1 class="display-4 fw-bold mb-3 text-center text-dark">
+      Ubicación del vehiculo
+    </h1>
+    <div class="bg-white mb-n5 p-3 shadow" style="position: relative">
+      <div class="relative w-[300px] h-[300px]" id="map"></div>
+    </div>
+  </section>
+  <section [ngClass]="isOpenEdit ? 'd-block' : 'hidden'">
+    <app-form-vehicle></app-form-vehicle>
+  </section>
+  </div>
+
+</div>

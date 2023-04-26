@@ -1,0 +1,200 @@
+<form [formGroup]="formBasics" (submit)="submit()" class="w-full p-4 px-4">
+  <div class="relative z-0 w-full mb-6 group">
+    <input
+      required
+      type="text"
+      id="createdBy"
+      class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+      formControlName="createdBy"
+      required
+    />
+    <label
+      for="createdBy"
+      class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+      >Creado por...</label
+    >
+  </div>
+  <div class="relative z-0 w-full mb-6 group">
+    <input
+      required
+      type="text"
+      id="plate"
+      class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+      formControlName="plate"
+      required
+    />
+    <label
+      for="plate"
+      class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+      >Placa</label
+    >
+  </div>
+  <div class="relative z-0 w-full mb-6 group">
+    <input
+      required
+      type="number"
+      id="model"
+      class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+      formControlName="model"
+      required
+    />
+    <label
+      for="model"
+      class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+      >Modelo</label
+    >
+  </div>
+  <div class="relative z-0 w-full mb-6 group">
+    <input
+      required
+      type="text"
+      id="transitLicense"
+      class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+      formControlName="transitLicense"
+      required
+    />
+    <label
+      for="transitLicense"
+      class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+      >Licencia de transito</label
+    >
+  </div>
+  <div class="relative z-0 w-full mb-6 group">
+    <input
+      required
+      type="text"
+      id="engineNumber"
+      class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+      formControlName="engineNumber"
+      required
+    />
+    <label
+      for="engineNumber"
+      class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+      >Número de motor</label
+    >
+  </div>
+  <div class="relative z-0 w-full mb-6 group">
+    <input
+      required
+      type="number"
+      id="emptyWeight"
+      class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+      formControlName="emptyWeight"
+      required
+    />
+    <label
+      for="emptyWeight"
+      class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+      >Peso vacío</label
+    >
+  </div>
+  <div class="relative z-0 w-full mb-6 group">
+    <input
+      required
+      type="text"
+      id="vin"
+      class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+      formControlName="vin"
+      required
+    />
+    <label
+      for="vin"
+      class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+      >Número de VIN</label
+    >
+  </div>
+  <div class="relative z-0 w-full mb-6 group">
+    <input
+      required
+      type="number"
+      id="cylinderCapacity"
+      class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+      formControlName="vin"
+      required
+    />
+    <label
+      for="cylinderCapacity"
+      class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+      >Capacidad de cilindraje</label
+    >
+  </div>
+
+  <div class="relative z-0 w-full mb-6 group">
+    <input
+      required
+      type="number"
+      id="loadingCapacity"
+      class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+      formControlName="loadingCapacity"
+      required
+    />
+    <label
+      for="loadingCapacity"
+      class="peer-focus:font-medium absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
+      >Capacidad de carga</label
+    >
+  </div>
+  <div class="relative z-0 w-full mb-6 group">
+    <div class="relative z-0 w-full mb-6 group">
+      <label
+        for="fuelType"
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        >Seleccione el tipo de combustible</label
+      >
+      <select
+        required
+        formControlName="fuelType"
+        id="fuelType"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      >
+        <option>Electric</option>
+        <option>Diesel</option>
+        <option>Gasoline</option>
+        <option>Gas</option>
+        <option>Acpm</option>
+      </select>
+    </div>
+
+    <div class="relative z-0 w-full mb-6 group">
+      <label
+        for="countries"
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        >Seleccione el tipo de propiedad</label
+      >
+      <select
+        required
+        id="propertyType"
+        formControlName="propertyType"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      >
+        <option>Ownself</option>
+        <option>Leased</option>
+        <option>Rented</option>
+        <option>Client</option>
+      </select>
+    </div>
+    <div class="relative z-0 w-full mb-6 group">
+      <label
+        for="status"
+        class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
+        >Seleccione el estatus</label
+      >
+      <select
+        required
+        id="status"
+        formControlName="status"
+        class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+      >
+        <option>Active</option>
+        <option>Inactive</option>
+      </select>
+    </div>
+  </div>
+  <button
+    type="submit"
+    class="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-gray-900 focus:outline-none bg-white rounded-full border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+  >
+    Agregar
+  </button>
+</form>

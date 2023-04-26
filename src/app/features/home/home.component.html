@@ -1,0 +1,32 @@
+<div class="relative w-full h-[calc(100%-64px)] p-4 bg-gray-300">
+  <ag-grid-angular
+    style="width: 100%; height: 100%"
+    class="ag-theme-alpine"
+    [columnDefs]="columnDefs"
+    [defaultColDef]="defaultColDef"
+    [rowData]="rowData"
+    [rowSelection]="'multiple'"
+    [editType]="'fullRow'"
+    [pagination]="true"
+    [paginationPageSize]="20"
+    [animateRows]="true"
+    (cellClicked)="onCellClicked($event)"
+  ></ag-grid-angular>
+  <div class="w-40 absolute right-3 top-[6px] p-4">
+    <button
+      (click)="isOpen = !isOpen"
+      cdkOverlayOrigin
+      #modalOverlay="cdkOverlayOrigin"
+      class="text-green-700 hover:text-white border border-green-700 hover:bg-green-800 font-medium rounded-lg text-sm px-5 py-2 text-center mr-2 mb-2 dark:border-green-500 dark:text-green-500 dark:hover:text-white dark:hover:bg-green-600 dark:focus:ring-green-800 flex justify-evenly items-center"
+    >
+      Agregar <fa-icon class="pl-2" [icon]="addIcon"></fa-icon>
+    </button>
+  </div>
+  <ng-template
+    cdkConnectedOverlay
+    [cdkConnectedOverlayOrigin]="modalOverlay"
+    [cdkConnectedOverlayOpen]="isOpen"
+  >
+    <app-modal [isAddOpen]="false" (isShowModal)="isOpen = $event"></app-modal>
+  </ng-template>
+</div>

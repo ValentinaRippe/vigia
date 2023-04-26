@@ -1,0 +1,105 @@
+<div
+  class="bg-[#6e6e6e81] fixed flex justify-center items-center z-50 w-full h-full p-4 overflow-x-hidden overflow-y-auto inset-0 max-h-full"
+>
+  <div class="relative w-full max-w-2xl max-h-full">
+    <!-- Modal content -->
+    <div class="relative bg-white rounded-lg shadow dark:bg-gray-700">
+      <!-- Modal header -->
+      <div
+        class="flex h-full items-center justify-between mb-4 border-b border-gray-200 dark:border-gray-700"
+      >
+        <!-- Tab -->
+        <ul
+          *ngIf="isAddOpen"
+          class="flex flex-wrap -mb-px text-sm font-medium text-center  dark:text-white"
+          id="myTab"
+          data-tabs-toggle="#myTabContent"
+          role="tablist"
+        >
+          <li class="mr-2" role="presentation">
+            <button
+              [ngClass]="activeGen"
+              class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300"
+              id="profile-tab"
+              data-tabs-target="#profile"
+              type="button"
+              role="tab"
+              aria-controls="profile"
+              aria-selected="true"
+              (click)="openTab(1)"
+            >
+              General
+            </button>
+          </li>
+          <li class="mr-2" role="presentation">
+            <button
+              [ngClass]="activeConf"
+              class="inline-block p-4 border-b-2 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300"
+              id="dashboard-tab"
+              data-tabs-target="#dashboard"
+              type="button"
+              role="tab"
+              aria-controls="dashboard"
+              aria-selected="false"
+              (click)="openTab(2)"
+            >
+              Configuración
+            </button>
+          </li>
+        </ul>
+        <!-- Title add vehicle -->
+        <div *ngIf="!isAddOpen" class="h-full justify-between">
+          <h5
+            class="px-3 h-full flex items-center text-xl font-bold leading-none text-gray-900 dark:text-white"
+          >
+            Agregar un vehiculo
+          </h5>
+        </div>
+
+        <!-- Close modal -->
+        <div>
+          <button
+            type="button"
+            class="py-4 px-4 text-gray-400 bg-transparent hover:bg-gray-200 hover:text-gray-900 rounded-lg text-sm p-1.5 ml-auto inline-flex items-center dark:hover:bg-gray-600 dark:hover:text-white"
+            data-modal-hide="staticModal"
+            (click)="modalShow()"
+          >
+            <svg
+              class="w-5 h-5"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
+                clip-rule="evenodd"
+              ></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+      <!--  -->
+      <div
+        class="overflow-auto min-w-full h-[80vh] flex justify-center"
+      >
+        <div *ngIf="isOpenGen">
+          <app-general [vehicle]="vehicle"></app-general>
+        </div>
+
+        <div *ngIf="isOpenConf" class="w-full h-full">
+
+          <app-settings [geo]="geo" [edit]="edit" [vehicle]="vehicle">
+            <div *ngIf="alertNotUbication" class="p-4 m-4 text-sm text-red-800 rounded-lg bg-red-50 dark:bg-gray-800 dark:text-red-400" role="alert">
+              <span class="font-medium">{{alertNotUbication}} </span>
+            </div>
+          </app-settings>
+        </div>
+
+        <div class="w-full" *ngIf="!isAddOpen">
+          <app-form-vehicle></app-form-vehicle>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
